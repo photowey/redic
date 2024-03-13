@@ -16,11 +16,15 @@
 
 // ----------------------------------------------------------------
 
-mod client;
-mod operation;
-mod template;
+use crate::operation::RedisOperations;
+use crate::template::RedisTemplate;
 
 // ----------------------------------------------------------------
 
-#[cfg(test)]
-mod tests;
+pub struct RedisTemplateProxy {}
+
+// ----------------------------------------------------------------
+
+impl RedisOperations for RedisTemplateProxy {}
+
+impl RedisTemplate for RedisTemplateProxy {}

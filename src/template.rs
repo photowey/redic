@@ -16,4 +16,8 @@
 
 // ----------------------------------------------------------------
 
-pub trait RedisTemplate {}
+use crate::operation::RedisOperations;
+
+mod proxy;
+
+pub trait RedisTemplate: RedisOperations {}

@@ -16,11 +16,16 @@
 
 // ----------------------------------------------------------------
 
-mod client;
-mod operation;
-mod template;
+pub trait RedisOperations {}
 
 // ----------------------------------------------------------------
 
-#[cfg(test)]
-mod tests;
+pub trait ValueOperations {}
+
+pub trait ListOperations {}
+
+pub trait SetOperations {}
+
+pub trait ZSetOperations {}
+
+pub trait GeoOperations {}
